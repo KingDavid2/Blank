@@ -53,6 +53,7 @@ group :development, :test do
   # Reduces boot times through caching; required in config/boot.rb
   gem "bootsnap", require: false
   gem 'factory_bot_rails', '~> 6.2'
+  gem 'ffaker', '~> 2.20'
   gem 'rspec-rails', '~> 6.0.0.rc1'
   gem 'rubocop-rails', '~> 2.14', require: false
   gem 'shoulda-matchers', '~> 5.0'
