@@ -55,6 +55,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 6.2'
   gem 'rspec-rails', '~> 6.0.0.rc1'
   gem 'rubocop-rails', '~> 2.14', require: false
+  gem 'shoulda-matchers', '~> 5.0'
 end
 
 group :development do
