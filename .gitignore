@@ -27,4 +27,3 @@ yarn-debug.log*
 # Ignore secrets and other files.
 .env*
 !.env.example
-docker-compose.override.yml
