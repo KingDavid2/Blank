@@ -4,3 +4,7 @@ import "@hotwired/turbo-rails";
 // Stimulus controllers.
 import "./controllers";
 import "./components/index.js";
+
+// Action Text
+import "trix";
+import "@rails/actiontext";
