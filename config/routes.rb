@@ -1,11 +1,18 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    confirmations: 'users/confirmations',
+    passwords: 'users/passwords',
+    registrations: 'users/registrations',
+    sessions: 'users/sessions'
+  }
   resources :users
 
   root to: 'pages#home'
-  
-  get "/up/", to: "up#index", as: :up
-  get "/up/databases", to: "up#databases", as: :up_databases
+
+  get '/up/', to: 'up#index', as: :up
+  get '/up/databases', to: 'up#databases', as: :up_databases
 
   # Sidekiq has a web dashboard which you can enable below. It's turned off by
   # default because you very likely wouldn't want this to be available to
