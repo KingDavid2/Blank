@@ -1,1 +1,49 @@
 require: rubocop-rails
+AllCops:
+  TargetRubyVersion: 3.1
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+    - 'app/**/*'
+    - 'config/**'
+    - 'lib/**/*'
+    - 'spec/**/*'
+  Exclude:
+    # exclude all files in db/ except for db/seeds.rb
+    - 'app/**/*.erb'
+    - 'app/assets/**/*'
+    - 'app/javascript/**/*'
+    - 'bin/**/*'
+    - 'config/**/*.yml*'
+    - 'config/*.key'
+    - 'db/schema.rb'
+    - 'db/migrate/'
+    - 'lib/**/*.erb'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+    - '**/*.keep'
+    - '**/*.json'
+
+Rails:
+  Enabled: true
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Rails/Blank:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+
+Style/Documentation:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    default: ()
+    '%i': '()'
+    '%w': '()'
