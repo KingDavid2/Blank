@@ -13,6 +13,7 @@ x-app: &default-app
     - ".env"
   restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
   stop_grace_period: "3s"
+  stdin_open: true
   tty: true
   volumes:
     - "${DOCKER_WEB_VOLUME:-./public:/app/public}"
