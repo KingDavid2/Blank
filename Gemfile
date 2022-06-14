@@ -62,6 +62,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 6.0.0.rc1'
   gem 'rubocop-rails', '~> 2.14', require: false
   gem 'shoulda-matchers', '~> 5.0'
+  gem 'pry-rails', '~> 0.3.9'
 end
 
 group :development do
